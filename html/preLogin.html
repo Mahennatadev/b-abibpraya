@@ -19,6 +19,26 @@
         body {
             font-family: "Poppins", sans-serif;
         }
+        .carousel-item {
+            height: 100vh;
+            position: relative;
+        }
+        .carousel-item img {
+            height: 100vh;
+            object-fit: cover;
+            width: 100%;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        .carousel .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+        }
     </style>
 </head>
 <body>
@@ -29,8 +49,37 @@
                 <p class="fs-5 text-dark text-opacity-50">Masuk dan nikmati pengalaman yang terbaik</p>
                 <a href="login.html" role="button" class="btn btn-warning text-light fs-5 fw-medium mt-5" style="--bs-btn-padding-x: 10rem; --bs-btn-padding-y: 1rem; --bs-btn-bg: #E99D02;">Lanjutkan dengan E-mail</a>
             </div>
-            <div class="col-6">
-                <img src="/image/imgOne.png" class="position-relative" alt="">
+            <div class="col-6 p-0 position-relative">
+                <div class="position-absolute bottom-0 start-50 translate-middle-x text-center text-white" style="z-index: 10; width: 600px; margin-bottom: 8rem;">
+                    <p class="fs-1 fw-semibold">Membangun Infrastruktur, Menggerakkan Masyarakat</p>
+                    <p class="fs-6">Menjaga Bumi dengan penggunaan mesin berat yang efisien dan ramah lingkungan</p>
+                </div>
+                <div id="carouselExample" class="carousel slide vh-100" data-bs-ride="carousel">
+                    <div class="carousel-indicators" style="margin-bottom: 4rem;">
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner vh-100">
+                        <div class="carousel-item active">
+                            <img src="/image/imageOne.jpg" class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/image/imageTwo.jpg" class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/image/imageThree.jpg" class="d-block w-100" alt="">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>  
     </div>
