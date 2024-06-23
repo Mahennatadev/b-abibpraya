@@ -6,11 +6,9 @@
     <title>Brantas Abipraya</title>
     <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -41,46 +39,15 @@
             height: 10px;
             border-radius: 100%;
         }
-        .login form .form-control{
-            background:none;
-            border:none;
-            border-bottom:1px solid #B4B4B4;
-            border-radius:0;
-            box-shadow:none;
-            outline:none;
-            color:inherit;
-        }
-        .form-control::placeholder {
-            font-size: 1.3rem;
-            color: #939393;
-        }
-        .form-control {
-            font-size: 1.3rem;
-            padding-bottom: 1.5rem;
-        }
     </style>
 </head>
 <body>
-    <div class="container-fluid text-center position-relative vh-100">
+    <div class="container-fluid text-center">
         <div class="row align-items-center vh-100">
-            <div class="col-6 align-items-center login">
-                <form method="post" id="loginForm">
-                    <p class="fs-1 fw-semibold">Selamat datang di<br>DPP DIGITAL LOGISTIC</p>
-                    <p class="fs-5 text-dark text-opacity-50" style="margin-bottom: 4rem;">Masukkan detail login</p>
-                    <div class="form-group mb-5" style="margin-left: 8rem; margin-right: 8rem;">
-                        <input id="email" class="form-control" type="email" name="email" placeholder="Alamat email">
-                    </div>
-                    <div class="form-group mb-5 position-relative" style="margin-left: 8rem; margin-right: 8rem;">
-                        <input id="password" class="form-control" type="password" name="password" placeholder="Kata sandi">
-                        <span class="position-absolute top-50 end-0 translate-middle-y me-3">
-                            <i class="fa fa-eye" id="togglePassword" style="cursor: pointer;"></i>
-                        </span>
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-warning text-light fs-5 fw-medium mt-3" type="submit" style="--bs-btn-padding-x: 19.25rem; --bs-btn-padding-y: 1rem; --bs-btn-bg: #E99D02;">Masuk</button>
-                    </div>
-                    <p class="fs-5 mt-3 fw-medium">Belum punya akun? <a href="#" style="color: #E99D02; text-decoration: none;">Buat Akun</a></p>
-                </form>
+            <div class="col-6 align-items-center">
+                <p class="fs-1 fw-semibold">Mesin Berat, Masa Depan<br>Pembangunan</p>
+                <p class="fs-5 text-dark text-opacity-50">Masuk dan nikmati pengalaman yang terbaik</p>
+                <a href="login.html" role="button" class="btn btn-warning text-light fs-5 fw-medium mt-5" style="--bs-btn-padding-x: 10rem; --bs-btn-padding-y: 1rem; --bs-btn-bg: #E99D02;">Lanjutkan dengan E-mail</a>
             </div>
             <div class="col-6 p-0 position-relative">
                 <div class="position-absolute bottom-0 start-50 translate-middle-x text-center text-white" style="z-index: 10; width: 600px; margin-bottom: 8rem;">
@@ -95,13 +62,13 @@
                     </div>
                     <div class="carousel-inner vh-100">
                         <div class="carousel-item active">
-                            <img src="/image/imageFour.jpg" class="d-block w-100" alt="">
+                            <img src="/image/imageOne.jpg" class="d-block w-100" alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="/image/imageFive.jpg" class="d-block w-100" alt="">
+                            <img src="/image/imageTwo.jpg" class="d-block w-100" alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="/image/imageSix.jpg" class="d-block w-100" alt="">
+                            <img src="/image/imageThree.jpg" class="d-block w-100" alt="">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -117,35 +84,5 @@
         </div>  
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Custom JS -->
-    <script>
-        document.getElementById("togglePassword").addEventListener("click", function () {
-            var passwordInput = document.getElementById("password");
-            var icon = this;
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                icon.classList.remove("fa-eye");
-                icon.classList.add("fa-eye-slash");
-            } else {
-                passwordInput.type = "password";
-                icon.classList.remove("fa-eye-slash");
-                icon.classList.add("fa-eye");
-            }
-        });
-
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-
-            if (!emailPattern.test(email)) {
-                alert("Silakan masukkan alamat email yang valid.");
-                event.preventDefault(); // Mencegah pengiriman form
-            } else if (password === "") {
-                alert("Kata sandi tidak boleh kosong.");
-                event.preventDefault(); // Mencegah pengiriman form
-            }
-        });
-    </script>
 </body>
 </html>
